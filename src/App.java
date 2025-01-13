@@ -157,8 +157,7 @@ public class App {
             for(int i = 0; i < nbCam; i++){
                 //capacité du camion
                 //int capacité = (int)((Math.random() * 5)+1);
-                int capacité = 1;
-                camions.add(new Camion(capacité, i+1));
+                camions.add(new Camion(i+1));
             }
 
             //Date et heure du jour

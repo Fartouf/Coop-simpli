@@ -135,7 +135,7 @@ public class App {
             //liste des noms deja utilisé
             HashSet<String> nomsUtilise = new HashSet<String>();
 
-            //on commence par creer les instances des producteurs
+            //on commence par créer les instances des producteurs
             for(int i = 0; i < nbProducteur; i++){
                 int index = (int)(Math.random() * nomsProducteurs.length); 
                 if(nomsUtilise.contains(nomsProducteurs[index])){
@@ -149,7 +149,7 @@ public class App {
 
             //System.out.println(producteurs);
 
-            //on cree l'entrpot en fonction de la taille choisie:
+            //on cree l'entrepot en fonction de la taille choisie:
             Entrepot entrepot = new Entrepot(capaciteEntrepot, hypermarche);
 
 
@@ -173,12 +173,12 @@ public class App {
                 
                 //livraisons des producteurs vers l'entrepot chaque semaine 
                 for(Producteur produteur : producteurs){
-                    //fonction qui calcule le nombre de production et cree les livraisons de la semaine.
+                    //fonction qui calcule le nombre de production et crée les livraisons de la semaine.
                     produteur.productuctionHebdo();
                     while(produteur.getStock().size() > 0){
                         for(Camion camion: camions){
                             if(produteur.getStock().size() > 0){
-                                System.out.println("Nouvelle livraison disponible1 chez le producteur : " + produteur.getNomProducteur());
+                                System.out.println("Nouvelle livraison disponible chez le producteur : " + produteur.getNomProducteur());
                                 camion.livraisonEntrepot(produteur, entrepot, log);
                             }else{
                                 System.out.println("Toute la marchandise est à l'entrepot");

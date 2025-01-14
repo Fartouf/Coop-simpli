@@ -21,7 +21,7 @@ public class Camion {
             producteur.removeStock();
            
             //log.info(("Nouvelle livraison du producteur " + producteur.getNomProducteur() + " arrivées à l'entrepot par le camion n°" + this.numeroCamion));
-            System.out.println("Nouvelle livraison du producteur " + producteur.getNomProducteur() + " arrivées à l'entrepot par le camion n°" + this.numeroCamion);
+            System.out.println("Nouvelle livraison du producteur " + producteur.getNomProducteur() + " arrivée à l'entrepot par le camion n°" + this.numeroCamion);
             
         }
         // Cas 2 le stock du producteur est vide et l'entrepot n'est pas rempli au maximum
@@ -47,7 +47,7 @@ public class Camion {
                 hypermarche.addStock(livraisonActuelle);
                 entrepot.removeLivraison();
             }else {
-                System.out.println("Le stock de l'entrpot est vide");
+                System.out.println("Le stock de l'entrepot est vide");
             }
             
         //log.info("Nouvelle livraison arrivée au hypermarché par le camion n°" + this.numeroCamion);

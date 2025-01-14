@@ -173,16 +173,13 @@ public class App {
                 
                 //livraisons des producteurs vers l'entrepot chaque semaine 
                 for(Producteur produteur : producteurs){
+                    //fonction qui calcule le nombre de production et cree les livraisons de la semaine.
                     produteur.productuctionHebdo();
-                    System.out.println("Nouvelle livraison disponibles chez le producteur : " + produteur.getNomProducteur());
                     while(produteur.getStock().size() > 0){
-                        System.out.println("Nombre de livraisons en stock chez " + produteur.getNomProducteur() + " : " + produteur.getStock().size());
                         for(Camion camion: camions){
                             if(produteur.getStock().size() > 0){
-                                System.out.println("Il reste " + entrepot.getCapatiteDisponible() + "  de capacité de stoquage à l'entrepot");
+                                System.out.println("Nouvelle livraison disponible1 chez le producteur : " + produteur.getNomProducteur());
                                 camion.livraisonEntrepot(produteur, entrepot, log);
-                                //System.out.println("Livraison vers l'entrepot enffectué, il reste " + produteur.getStock().size() + " Livraisons chez le producteur");
-
                             }else{
                                 System.out.println("Toute la marchandise est à l'entrepot");
                                 break;
